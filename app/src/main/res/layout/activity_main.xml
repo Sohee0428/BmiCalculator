@@ -4,11 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".MainActivity">
 
-   
+    <TextView
+        android:id="@+id/heightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="신장"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/heightEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="cm"
+        app:layout_constraintTop_toBottomOf="@id/heightTxt" />
+
+    <TextView
+        android:id="@+id/weightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="체중"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightEdt" />
+
+    <EditText
+        android:id="@+id/weightEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="cm"
+        app:layout_constraintTop_toBottomOf="@id/weightTxt" />
+
+    <TextView
+        android:id="@+id/sexTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="성별"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weightEdt" />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sexTxt">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/womanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="여성" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/manBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="남성" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bmiCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인하기"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
