@@ -38,8 +38,8 @@ class ResultActivity : AppCompatActivity() {
         val resultTxt: TextView by lazy { findViewById(R.id.result) }
         val standard: TextView by lazy { findViewById(R.id.standardWeight) }
 
-        bmiTxt.text = bmi.toString()
+        bmiTxt.text = bmi.toString().substring(0, 5)
         resultTxt.text = "$result 입니다."
-        standard.text = standardWeight.toString()
+        standard.text = standardWeight.toString().substring(0, 5)
     }
 }
